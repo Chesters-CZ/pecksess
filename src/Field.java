@@ -6,6 +6,18 @@ public class Field {
 
     public Karticky.Obrazek[] seznamKaret = {Karticky.Obrazek.KAREL, Karticky.Obrazek.PAVEL, Karticky.Obrazek.MIKOLAS, Karticky.Obrazek.VITEK, Karticky.Obrazek.ZEDEK, Karticky.Obrazek.LUKAS, Karticky.Obrazek.KUBA, Karticky.Obrazek.HONZA};
 
+    @Override
+    public String toString() {
+        StringBuilder vec = new StringBuilder();
+        for (Karticky[] radek : herniPole) {
+            for (Karticky karta : radek) {
+                vec.append(karta.toString()).append(" ");
+            }
+            vec.append("\n");
+        }
+        return vec.toString();
+    }
+
     public void generate() {
 
         int x;
